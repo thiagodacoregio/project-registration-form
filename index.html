@@ -1,43 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estrelas do Amanha</title>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stars fo tomorrow</title>
 
-    <link rel="stylesheet" href="style/index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="style/index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div id="app">
-        <main>
-            <div class="main-container">
-                <div class="back">
-                  <img src="assets/icons/arrow-left-02.svg" alt="icone de voltar">  
-                  <span>Voltar</span>
-                </div>
+      <main>
+        <div class="main-container">
+          <div class="back">
+            <img src="assets/icons/arrow-left-02.svg" alt="back incon" />
+            <span>Back</span>
+          </div>
 
-                <h1>Formulário de matrícula</h1>
-                <p>Preencha os dados abaixo para matricular seu filho na escola de educação infantil Estrelas do Amanhã.</p>
+          <h1>Registration form</h1>
+          <p>
+            Fill in the information below to enroll your child at the Estrelas
+            do Amanhã early childhood education school.
+          </p>
 
-            </div>
-        </main>
+          <form method="post" enctype="multipart/form-data">
+            <fieldset class="child-info">
+              <legend>Child information</legend>
 
-        <aside>
-            <div class="aside-container">
-                <header>
-                    <img src="assets/Logo.svg" alt="logo entrelas do amanha">
-                    <h2>Porque cada momento de aprendizado conta</h2>
-                    <p>Inscreva seu filho em nossa escola e veja-o florescer em um ambiente acolhedor, seguro e estimulante.</p>
-                </header>
+              <div class="input-wrapper">
+                <label for="fullname">Full name</label>
+                <input
+                  type="text"
+                  name="fullname"
+                  id="fullname"
+                  placeholder="What is the child's name?"
+                />
+              </div>
 
-                <img src="assets/Illustration.svg" alt="Ilustracao de criancas estudando">
-            </div>
-        </aside>
+              <div class="input-wrapper">
+                <label for="birth">Date of birth</label>
+                <input type="date" id="birth" />
+              </div>
+
+              <div class="select-wrapper">
+                <label for="gender">Gender</label>
+                <select name="gender" id="gender">
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="n/a">I prefer not to answer</option>
+                </select>
+              </div>
+
+              <div class="textarea-wrapper">
+                <label for="medical-info">Medical information</label>
+                <textarea
+                  name="medical-info"
+                  id="medical-info"
+                  cols="30"
+                  rows="10"
+                  placeholder="Does the child have any medical conditions that the school should be aware of (if yes, specify)?"
+                ></textarea>
+              </div>
+
+              <div class="droparea-wrapper">
+                <input type="file" id="birth-file" name="birth-file" />
+                <img src="assets/icons/cloud-upload.svg" alt="cloud icon" />
+                <p>Click here to <br />select the folders</p>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </main>
+
+      <aside>
+        <div class="aside-container">
+          <header>
+            <img src="assets/Logo.svg" alt="logo stars of tomorrow" />
+            <h2>Because every moment of learning counts</h2>
+            <p>
+              Enroll your child in our school and watch them flourish in a
+              welcoming, safe and stimulating environment.
+            </p>
+          </header>
+
+          <img
+            src="assets/Illustration.svg"
+            alt="Illustration of children studying"
+          />
+        </div>
+      </aside>
     </div>
-
-</body>
+  </body>
 </html>
